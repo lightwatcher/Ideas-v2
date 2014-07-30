@@ -1,0 +1,12 @@
+<h1>Ideabases</h1>
+
+<p><a href="/new_ideabase">Add a New Idea</a></p>
+<div><strong>Idea</strong></div>
+  <% @ideabases.each do |ideabasis| %>
+      <div><a href="/ideabases/<%= ideabasis.id %>">Show</a>|
+      <a href="/ideabases/<%= ideabasis.id %>/edit">Edit</a>|
+      <a href="/ideabases/<%= ideabasis.id %>/destroy">Destroy</a>
+  <% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,13 @@
+<h1>Editing Ideabase #<%= @ideabase.id %></h1>
+
+<form action="/ideabases/<%= @ideabase.id %>/update">
+  <div>
+    <label for="idea">Idea</label><br />
+    <input id="idea" name="idea" value="<%= @ideabase.idea  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

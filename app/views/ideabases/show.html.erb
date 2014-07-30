@@ -1,8 +1,31 @@
-<h1>Ideabase #<%= @ideabase.id %></h1>
-
-<div>
-  <strong>Idea</strong>:<br />
-  <p><%= @ideabase.idea %></p>
-</div>
-<a href="/ideabases/<%= @ideabase.id %>/edit">Edit</a> |
-<a href="/ideabases/<%= @ideabase.id %>/destroy">Destroy</a>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/ideabases">Ideas</a>
+    </div>
+  </div>
+</nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1><%= @ideabase.idea %>
+          <small>
+            <a href="/ideabases/<%= @ideabase.id %>/edit">Edit</a> |
+            <a href="/ideabases/<%= @ideabase.id %>/destroy">Destroy</a> 
+          </small></h1>
+        <div>
+          
+        </div>
+        <div>
+          <a href="/ideabases">Back to list of ideas</a> | 
+          <a href="/new_ideabase">Create a new idea</a>
+        </div>
+      </div>
+    </div>
+  </div>

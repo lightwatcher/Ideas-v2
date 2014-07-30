@@ -13,15 +13,5 @@
  *= require_tree .
  *= require_self
  */
-h1 {
-color:red;
-}
-*{font-family:sans-serif;
-text-align:center;
-background-color: green;
-text-decoration:none}
-p{color:yellow}
-b{color:yellow}
-strong{color:yellow}
 
 

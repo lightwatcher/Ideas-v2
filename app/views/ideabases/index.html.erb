@@ -1,12 +1,29 @@
-<h1>Ideabases</h1>
-
-<p><a href="/new_ideabase">Add a New Idea</a></p>
-<div><strong>Idea</strong></div>
-  <% @ideabases.each do |ideabasis| %>
-      <div><a href="/ideabases/<%= ideabasis.id %>">Show</a>|
-      <a href="/ideabases/<%= ideabasis.id %>/edit">Edit</a>|
-      <a href="/ideabases/<%= ideabasis.id %>/destroy">Destroy</a>
-  <% end %>
-  </tbody>
-</table>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="ideabases">Ideas</a>
+    </div>
+  </div>
+</nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Your list of ideas</h1>
+        <p>
+          <a href="/new_ideabase">Create a new idea</a>
+        </p>
+        <div class="list-group">
+          <% @ideabases.each do |ideabasis| %>
+          <a href="/ideabases/<%= ideabasis.id%>" class="list-group-item"> <%=ideabasis.idea%> </a>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 

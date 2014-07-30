@@ -1,13 +1,30 @@
-<h1>Editing Ideabase #<%= @ideabase.id %></h1>
-
-<form action="/ideabases/<%= @ideabase.id %>/update">
-  <div>
-    <label for="idea">Idea</label><br />
-    <input id="idea" name="idea" value="<%= @ideabase.idea  %>" type="text" />
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/ideabases">Ideas</a>
+    </div>
   </div>
-  <div>
-    <input type="submit">
+</nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Editing Idea #<%= @ideabase.id %></h1>
+        <form role="form" action="/ideabases/<%= @ideabase.id %>/update">
+          <div class="form-group">
+            <label for="idea" class="control-label">Idea</label>
+              <input type="text" class="form-control" id="idea" name="idea" placeholder="Idea" value="<%= @ideabase.idea  %>">
+            </div>
+            <input type="submit" class="btn btn-primary">
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-</form>
 
 
